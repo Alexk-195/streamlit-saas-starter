@@ -113,11 +113,21 @@ For more details, refer to [Stripe's Billing Documentation](https://stripe.com/d
 ### Running the App
 
 1. **Install Dependencies**:
+    It's suggested to create python venv first (preconfigured for VS Code launcher)
+
+    ```bash
+    python -m venv ~/venv_saas
+    source ~/venv_saas/bin/activate
+    ```
+
+    Then install everything in this venv
+
     ```bash
     pip install -r requirements.txt
     ```
 
 2. **Run the App**:
+
     ```bash
     streamlit run Login.py
     ```
