@@ -18,7 +18,8 @@ st.set_page_config(
 # Initialization with Supabase credentials
 SUPABASE_URL = st.secrets["SUPABASE_URL"]
 SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
-
+print("Supabase URL:", SUPABASE_URL)
+print("Supabase Key:", SUPABASE_KEY[0:6] + "..." + SUPABASE_KEY[-6:])
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 st.title("Streamlit SaaS Starter Login Page")
@@ -43,7 +44,8 @@ def main():
         st.session_state['user'] = session['user']
 
         # Perform checks of user session here. 
-        st.session_state.role = "user"
+        # TODO: Fetch user role from database
+        st.session_state.role = "super-admin" # user/admin/super-admin based on your logic
 
         # # Update query param to reset url fragments
         st.query_params.login = ["success"]

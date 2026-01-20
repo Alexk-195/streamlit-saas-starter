@@ -55,7 +55,8 @@ def main():
     if session:
         user_id = session['user']['id']
         user_email = session['user']['email']
-        user_name = session['user']['user_metadata']['name']
+        #user_name = session['user']['user_metadata']['name']
+        user_name = session['user']['email']
         
         # Ensure user exists in database
         # ensure_user_in_database(user_id, user_email, user_name)

@@ -12,6 +12,8 @@ load_dotenv(find_dotenv())
 # Initialization with Supabase credentials
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+print("Supabase URL:", SUPABASE_URL)
+print("Supabase Key:", SUPABASE_KEY[0:6] + "..." + SUPABASE_KEY[-6:])
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 stripe_product_id_starter = ""

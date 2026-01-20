@@ -7,7 +7,7 @@ def authenticated_menu():
     st.sidebar.page_link("pages/2_Dashboard.py", label="Dashboard")
     st.sidebar.page_link("Login.py", label="Logout")
 
-
+    st.sidebar.page_link("pages/user.py", label="User profile")
 
     if st.session_state.role in ["admin", "super-admin"]:
         st.sidebar.page_link("pages/admin.py", label="Manage users")

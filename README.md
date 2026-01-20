@@ -119,7 +119,7 @@ For more details, refer to [Stripe's Billing Documentation](https://stripe.com/d
 
 2. **Run the App**:
     ```bash
-    streamlit run app.py
+    streamlit run Login.py
     ```
 
 Follow these steps to set up your development environment and start using the Streamlit SaaS Starter template. If you have any questions or need further assistance, feel free to contact the support team or check the documentation.
